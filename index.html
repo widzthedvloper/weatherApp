@@ -8,7 +8,19 @@
     <title>Weather App</title>
 </head>
 <body>
-
+  <form class="row g-3">
+  <div class="col-auto">
+    <label for="staticLocation" class="visually-hidden">Location</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticLocation" value="email@example.com">
+  </div>
+  <div class="col-auto">
+    <label for="inputLocation" class="visually-hidden">Password</label>
+    <input type="text" class="form-control" id="inputLocation" placeholder="Location">
+  </div>
+  <div class="col-auto">
+    <button type="button" class="btn btn-primary mb-3">SEARCH</button>
+  </div>
+</form>
   <div id="content">
 
   </div>
