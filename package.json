@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/widzthedvloper/weatherApp/issues"
   },
-  "homepage": "https://github.com/widzthedvloper/weatherApp#readme"
+  "homepage": "https://github.com/widzthedvloper/weatherApp#readme",
+  "devDependencies": {
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
 }
