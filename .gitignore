@@ -7,7 +7,7 @@ node_modules
 
 # Other files and folders
 .settings/
-
+.jshintrc
 # Executables
 *.swf
 *.air
