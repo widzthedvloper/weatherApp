@@ -14,8 +14,12 @@ body {
   background-image: linear-gradient(blue 50%, white 100%);
 }
 
+h1 {
+  margin-top: 10%;
+}
+
 .location-form {
-  margin: 25% auto;
+  margin: 5% auto;
   padding: 0;
   justify-content: center;
 }
