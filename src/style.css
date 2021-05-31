@@ -13,3 +13,9 @@ body {
   background-attachment: fixed;
   background-image: linear-gradient(blue 50%, white 100%);
 }
+
+.location-form {
+  margin: 25% auto;
+  padding: 0;
+  justify-content: center;
+}
