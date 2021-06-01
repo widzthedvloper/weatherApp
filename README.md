@@ -15,7 +15,7 @@ This App allows a user to enter a location and receive all necesary weather fore
 ## Getting Started
 
 - Open the terminal command line.
-- Clone the repo:--> git clone git@github.com:widzthedvloper/myRestaurant.git
+- Clone the repo:--> git clone url/ssh
 - cd weatherApp
 - npm install
 - If you experience any issue with images or javasript try runnind `npm run dev`
