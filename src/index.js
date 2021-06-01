@@ -1,4 +1,11 @@
 import './style.css';
-import { findWeather } from './domManipulation';
+import consumeData from './data';
+
+const findWeather = () => {
+  document.getElementById('button').onclick = () => {
+    const city = document.getElementById('inputLocation').value;
+    consumeData(city);
+  };
+};
 
 findWeather();
