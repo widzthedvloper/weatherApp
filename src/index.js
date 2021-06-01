@@ -1,4 +1,4 @@
 import './style.css';
-import apiInfo from './data';
+import consumeData from './data';
 
-apiInfo('miami');
+consumeData('miami');
