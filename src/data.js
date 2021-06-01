@@ -14,4 +14,12 @@ const apiInfo = (location) => {
     .catch((error) => error);
 };
 
-export default apiInfo;
+const consumeData = async () => {
+  try {
+    const resultApi = await apiInfo();
+    return resultApi;
+  } catch (error) {
+    return error;
+  }
+};
+export default consumeData;
