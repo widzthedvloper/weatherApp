@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-cycle
+import consumeData from './data';
+
 const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description) => {
   const temp = document.getElementById('main-temp');
   temp.innerHTML = temperature;
@@ -18,4 +21,11 @@ const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description) 
   theDescription.innerHTML = description;
 };
 
-export default renderInfo;
+const findWeather = () => {
+  document.getElementById('button').onclick = () => {
+    const city = document.getElementById('inputLocation').Value;
+    consumeData(city);
+  };
+};
+
+export { renderInfo, findWeather };
