@@ -23,7 +23,7 @@ const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description) 
 
 const findWeather = () => {
   document.getElementById('button').onclick = () => {
-    const city = document.getElementById('inputLocation').Value;
+    const city = document.getElementById('inputLocation').value;
     consumeData(city);
   };
 };

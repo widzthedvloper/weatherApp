@@ -1,4 +1,4 @@
 import './style.css';
-import consumeData from './data';
+import { findWeather } from './domManipulation';
 
-consumeData('miami');
+findWeather();
