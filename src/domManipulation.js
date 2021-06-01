@@ -2,6 +2,9 @@ const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description, 
   const temp = document.getElementById('main-temp');
   temp.innerHTML = temperature;
 
+  const degree = document.getElementById('degree');
+  degree.innerHTML = '&#8451;';
+
   const theCity = document.getElementById('city');
   theCity.innerHTML = city;
 
