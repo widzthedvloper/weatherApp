@@ -15,18 +15,31 @@
     <form class="row g-3 location-form">
     <div class="col-auto">
       <label for="staticLocation" class="visually-hidden">Location</label>
-      <input type="text" readonly class="form-control-plaintext text-light" id="staticLocation" value="EJ. Hawaii">
+      <input type="text" readonly class="form-control-plaintext text-light" id="staticLocation" value="EJ. Miami">
     </div>
     <div class="col-auto">
-      <label for="inputLocation" class="visually-hidden">Password</label>
-      <input type="text" class="form-control" id="inputLocation" placeholder="EJ. Hawaii">
+      <label for="inputLocation" class="visually-hidden">Location</label>
+      <input id="location" type="text" class="form-control" id="inputLocation" placeholder="EJ. Miami">
     </div>
     <div class="col-auto">
       <button type="button" class="btn btn-primary mb-3">SEARCH</button>
     </div>
   </form>
     <div id="content">
+      <div id="info">
+        <span id="temp_max"></span>
+        <span id="temp_min"></span>
+        <span id="humidity"></span>
+        <span id="pressure"></span>
+      </div>
+      <div id="main">
+        <div id="temp">
 
+        </div>
+        <div id="description">
+          
+        </div>
+      </div>
     </div>
   </div>
   <script src="main.js"></script>  
