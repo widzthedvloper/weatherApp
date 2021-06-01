@@ -18,7 +18,7 @@ This App allows a user to enter a location and receive all necesary weather fore
 - Clone the repo:--> git clone url/ssh
 - cd weatherApp
 - npm install
-- If you experience any issue with images or javasript try runnind `npm run dev`
+- If you experience any issue with images or javasript try run `npm run dev`
 
 ## Authors
 
