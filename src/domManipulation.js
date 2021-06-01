@@ -18,4 +18,9 @@ const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description) 
   theDescription.innerHTML = description;
 };
 
-export default renderInfo;
+const setAttribute = () => {
+  const content = document.getElementById('content');
+  content.setAttribute('class', 'content');
+};
+
+export { renderInfo, setAttribute };
