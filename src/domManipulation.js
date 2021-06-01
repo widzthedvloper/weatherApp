@@ -1,4 +1,4 @@
-const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description) => {
+const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description, pressure) => {
   const temp = document.getElementById('main-temp');
   temp.innerHTML = temperature;
 
@@ -16,6 +16,9 @@ const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description) 
 
   const theDescription = document.getElementById('weather-description');
   theDescription.innerHTML = description;
+
+  const thePressure = document.getElementById('pressure');
+  thePressure.innerHTML = pressure;
 };
 
 const setAttribute = () => {
