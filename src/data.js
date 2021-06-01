@@ -17,7 +17,7 @@ const apiInfo = (location) => {
     .catch((error) => error);
 };
 
-const consumeData = async (location) => {
+const consumeData = async (location = 'San Francisco') => {
   try {
     const resultApi = await apiInfo(location);
     setAttribute();
