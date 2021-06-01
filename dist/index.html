@@ -28,18 +28,18 @@
   </form>
     <div id="content">
       <div id="info" class="d-flex justify-content-around">
-        <div><i class="fas fa-temperature-high text-white"></i><span id="temp_max" class="text-white"></span></div>
-        <div><i class="fas fa-temperature-high text-white"></i><span id="temp_min" class="text-white"></span></div>
-        <div><i class="fas fa-tint text-white"></i><span id="humidity" class="text-white"></span></div>
-        <div><i class="fas fa-tachometer-alt text-white"></i><span id="pressure" class="text-white"></span></div>
+        <div><i class="fas fa-temperature-high text-white" alt="Max Temperature"></i><span id="temp_max" class="text-white"></span></div>
+        <div><i class="fas fa-temperature-low text-white" alt="Min Temperature"></i><span id="temp_min" class="text-white"></span></div>
+        <div><i class="fas fa-tint text-white" alt="Humidity"></i><span id="humidity" class="text-white"></span></div>
+        <div><i class="fas fa-tachometer-alt text-white" alt="Pressure"></i><span id="pressure" class="text-white"></span></div>
       </div>
       <div id="main">
         <div id="temp" class="d-flex justify-content-around">
-          <span id="main-temp" class="text-white big-size"></span>
-          <span id="city" class="text-white city-span"></span>
+          <div><span class="fas fa-cloud text-white"></span><span id="main-temp" class="text-white big-size"></span><span id="degree" class="text-white"></span></div>
+          <div><i class="fas fa-city text-white"></i><span id="city" class="text-white city-span"></span></div>
         </div>
         <div id="description">
-          <span id="weather-description" class="text-white px-5"></span>
+          <span class="fas fa-info-circle text-white"></span><span id="weather-description" class="text-white px-5"></span>
         </div>
         <div id="error">
           <span id="span-error" class="text-danger"></span>
