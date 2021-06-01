@@ -14,9 +14,9 @@ const apiInfo = (location) => {
     .catch((error) => error);
 };
 
-const consumeData = async () => {
+const consumeData = async (location) => {
   try {
-    const resultApi = await apiInfo();
+    const resultApi = await apiInfo(location);
     return resultApi;
   } catch (error) {
     return error;
