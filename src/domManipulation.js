@@ -29,4 +29,15 @@ const setAttribute = () => {
   content.setAttribute('class', 'content');
 };
 
-export { renderInfo, setAttribute };
+const changeBackground = (temperature) => {
+  const body = document.getElementById('my-body');
+  if (temperature <= 18) {
+    body.setAttribute('class', 'body-rainy');
+  } else if (temperature > 18 && temperature <= 30) {
+    body.setAttribute('class', 'body-cloudy');
+  } else if (temperature < 30) {
+    body.setAttribute('class', 'body-sunny');
+  }
+};
+
+export { renderInfo, setAttribute, changeBackground };
