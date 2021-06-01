@@ -27,4 +27,13 @@ h1 {
 .content {
   border: 1px aliceblue solid;
   border-radius: 20px;
+  padding: 60px;
+}
+
+.big-size {
+  font-size: 60px;
+}
+
+.city-span {
+  align-self: end;
 }
