@@ -37,3 +37,7 @@ h1 {
 .city-span {
   align-self: end;
 }
+
+span {
+  padding-left: 5px;
+}
