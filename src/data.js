@@ -1,3 +1,5 @@
+import renderInfo from './domManipulation';
+
 const apiInfo = (location) => {
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=c7911001fbb406aa98e26c70ab98ec78`, { mode: 'cors' })
     .then((api) => (api.json()))
@@ -9,7 +11,7 @@ const apiInfo = (location) => {
       const maxTemp = Math.round((api.main.temp_max) - 273);
       const { description } = api.weather[0];
       // eslint-disable-next-line no-console
-      console.log(temperature, city, humidity, minTemp, maxTemp, description);
+      renderInfo(temperature, city, humidity, minTemp, maxTemp, description);
     })
     .catch((error) => error);
 };
