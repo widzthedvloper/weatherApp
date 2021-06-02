@@ -1,13 +1,29 @@
 import { renderInfo, setAttribute, changeBackground } from './domManipulation';
 
-const convertData = (temperature, city, humidity, minTemp, maxTemp, description, pressure) => {
-  const newTemperature = temperature;
+const convertData = (temperature, city, humidity, minTemp, maxTemp, description, pressure, sym) => {
+  const newTemp = (temperature * (9 / 5) + 32);
   const newCity = city;
   const newHumidity = humidity;
-  const newMinTemp = minTemp;
-  const newMaxTemp = maxTemp;
-  const newDescription = description;
+  const newMinTemp = (minTemp * (9 / 5) + 32);
+  const newMaxTemp = (maxTemp * (9 / 5) + 32);
+  const newDescrip = description;
   const newPressure = pressure;
+
+  renderInfo(newTemp, newCity, newHumidity, newMinTemp, newMaxTemp, newDescrip, newPressure, sym);
+};
+
+const grabToggleButton = (temperature, city, humidity, minTemp, maxTemp, description, pressure) => {
+  let count = 0;
+  const myToggleButton = document.getElementById('toggleButton');
+  myToggleButton.onclick = () => {
+    if (count === 0) {
+      renderInfo(temperature, city, humidity, minTemp, maxTemp, description, pressure, '&#8451;');
+      count += 1;
+    } else {
+      convertData(temperature, city, humidity, minTemp, maxTemp, description, pressure, '&#8457;');
+      count = 0;
+    }
+  };
 };
 
 const apiInfo = (location) => {
@@ -21,9 +37,9 @@ const apiInfo = (location) => {
       const maxTemp = Math.round((api.main.temp_max) - 273);
       const { description } = api.weather[0];
       const { pressure } = api.main;
-      convertData(temperature, city, humidity, minTemp, maxTemp, description, pressure);
       changeBackground(temperature);
-      renderInfo(temperature, city, humidity, minTemp, maxTemp, description, pressure);
+      grabToggleButton(temperature, city, humidity, minTemp, maxTemp, description, pressure);
+      renderInfo(temperature, city, humidity, minTemp, maxTemp, description, pressure, '&#8451;');
     })
     .catch((error) => error);
 };
