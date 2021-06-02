@@ -13,7 +13,6 @@ const apiInfo = (location) => {
       const { pressure } = api.main;
 
       changeBackground(temperature);
-      // eslint-disable-next-line no-console
       renderInfo(temperature, city, humidity, minTemp, maxTemp, description, pressure);
     })
     .catch((error) => error);
