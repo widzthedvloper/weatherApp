@@ -1,9 +1,9 @@
-const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description, pressure) => {
+const renderInfo = (temperature, city, humidity, minTemp, maxTemp, description, pressure, symb) => {
   const temp = document.getElementById('main-temp');
   temp.innerHTML = temperature;
 
   const degree = document.getElementById('degree');
-  degree.innerHTML = '&#8451;';
+  degree.innerHTML = symb;
 
   const theCity = document.getElementById('city');
   theCity.innerHTML = city;
