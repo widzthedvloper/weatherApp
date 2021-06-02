@@ -19,6 +19,7 @@ This App allows a user to enter a location and receive all necesary weather fore
 - cd weatherApp
 - npm install
 - If you experience any issue with images or javasript try run `npm run dev`
+- When you first load the app make sure you dobble click the change data scale button
 
 ## Authors
 
