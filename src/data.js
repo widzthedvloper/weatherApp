@@ -1,5 +1,15 @@
 import { renderInfo, setAttribute, changeBackground } from './domManipulation';
 
+const convertData = (temperature, city, humidity, minTemp, maxTemp, description, pressure) => {
+  const newTemperature = temperature;
+  const newCity = city;
+  const newHumidity = humidity;
+  const newMinTemp = minTemp;
+  const newMaxTemp = maxTemp;
+  const newDescription = description;
+  const newPressure = pressure;
+};
+
 const apiInfo = (location) => {
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=c7911001fbb406aa98e26c70ab98ec78`, { mode: 'cors' })
     .then((api) => (api.json()))
@@ -11,7 +21,7 @@ const apiInfo = (location) => {
       const maxTemp = Math.round((api.main.temp_max) - 273);
       const { description } = api.weather[0];
       const { pressure } = api.main;
-
+      convertData(temperature, city, humidity, minTemp, maxTemp, description, pressure);
       changeBackground(temperature);
       renderInfo(temperature, city, humidity, minTemp, maxTemp, description, pressure);
     })
