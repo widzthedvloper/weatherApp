@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body id='my-body'>
+  <div class="container">
+    <h1 class="text-light text-center"> Weather-U</h1>
+    <H2 class="text-light text-center">Verify the weather from any where in the world have never been that easy!</H2>
+    <form class="row g-3 location-form">
+    <div class="col-auto">
+      <label for="staticLocation" class="visually-hidden">Location</label>
+      <input type="text" readonly class="form-control-plaintext text-light" id="staticLocation" value="EJ. Miami">
+    </div>
+    <div class="col-auto">
+      <label for="inputLocation" class="visually-hidden">Location</label>
+      <input type="text" class="form-control" id="inputLocation" placeholder="EJ. Miami">
+    </div>
+    <div class="col-auto">
+      <button id="button" type="button" class="btn btn-primary mb-3">SEARCH</button>
+    </div>
+  </form>
+    <div id="content">
+      <div id="info" class="d-flex justify-content-around">
+        <div><i class="fas fa-temperature-high text-white" alt="Max Temperature"></i><span id="temp_max" class="text-white"></span></div>
+        <div><i class="fas fa-temperature-low text-white" alt="Min Temperature"></i><span id="temp_min" class="text-white"></span></div>
+        <div><i class="fas fa-tint text-white" alt="Humidity"></i><span id="humidity" class="text-white"></span></div>
+        <div><i class="fas fa-tachometer-alt text-white" alt="Pressure"></i><span id="pressure" class="text-white"></span></div>
+      </div>
+      <div id="main">
+        <div id="temp" class="d-flex justify-content-around">
+          <div><span class="fas fa-cloud text-white"></span><span id="main-temp" class="text-white big-size"></span><span id="degree" class="text-white"></span></div>
+          <div><i class="fas fa-city text-white"></i><span id="city" class="text-white city-span"></span></div>
+        </div>
+        <div id="description">
+          <span class="fas fa-info-circle text-white"></span><span id="weather-description" class="text-white px-3"></span>
+        </div>
+        <div id="toggle">
+          <span id="toggleButton" class="text-white mt-3 btn btn-primary">Change Data Scale</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>  
+</body>
+</html>
